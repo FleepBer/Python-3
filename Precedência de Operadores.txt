@@ -1,0 +1,9 @@
+Nível	  | Categoria	  | Operadores
+________________________________________________
+7 (alto)  | exponenciação | **
+6		  | multiplicação | *, /, //, %
+5		  | adição		  | +, -
+4		  | relacional	  | ==, !=, <=, >=, >, <
+3		  |	lógico		  | not
+2		  | lógico		  | and
+1(baixo)  | lógico		  | or

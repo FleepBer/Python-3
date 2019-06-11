@@ -1,0 +1,10 @@
+A média aritmética é a soma de:
+
+N é números de X somados(números, no caso a baixo é 4)
+MA=2+3+4+5/N
+
+MA=14/4
+MA=3.5
+
+Média aritmética é a soma de vários valores e dividido pelo total deles. Ou seja, o resultado dessa divisão equivale a um valor médio entre todos os valores
+

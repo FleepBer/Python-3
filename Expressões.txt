@@ -1,0 +1,4 @@
+Input...volta como string)
+Int...Número Inteiro)
+Int(Input))...volta o número inteiro
+Type...Trás o tipo de classe

@@ -1,0 +1,16 @@
+Equação Quadrática:
+
+ax²+bx+c=0
+
+x=variável
+a,b e c são as entradas para o Programa
+if importante por que tem três casos diferentes
+
+
+Bhaskara:
+
+x = – b ± √b²-4ac   (Delta=√b²-4ac)
+      2·a
+
+Se o Delta for igual a 0, dái a Equação Quadrática só vai ter uma raiz. Se o Delta for negativo, a Equação Quadrática não vai ter raízes reais, vai ter raízes imaginárias.
+

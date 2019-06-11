@@ -1,0 +1,35 @@
+Seres humanos erram:
+
+Programas contém erros(bugs)
+- Sintaxe
+- Lógica
+Software e robusto deve conter o mínimo possível de erros
+Bugs podem causar catástrofes
+Bugs podem causar desconforto
+- E fazer com que seu cliente abandone seu produto
+
+Como testar:
+
+Teste manuais
+- Cansativo
+- Você vai testar apenas alguns casos
+- Você vai testar apenas algumas vezes
+
+Testes automatizados
+- Bateria de testes que cobre o máximo possídel do seu código
+- Executa rotineiramente várias vezes por dia
+
+Arcabouços de Testes Automatizados:
+
+Vamos aprender o pytest
+Veja como instalar em docs.pytest.org
+
+Considera que os arquivos do tipo test_*.py e *_test.py são arquivos de teste
+Executa funções e metódos do tipo test_*
+Considera classes do tipo Test*
+
+Em suma:
+Pense cuidadosamente nos casos em que seu programa pode falhar.
+Pense nos diferentes tipos de entrada que exercitam caminhos diferentes no seu programa.
+Pense nos casos diferentes do seu código.
+Escreva testes automatizados para todos esses casos!

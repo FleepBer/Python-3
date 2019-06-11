@@ -1,0 +1,41 @@
+Execução Condicional:
+
+Só é chamado caso a condição seja sisfeita. IF
+Se a condição for verdadeira, ele executa o comando
+if condição:
+    comando
+
+Exemplo:
+
+temperatura = 102
+if temperatura > 100:
+	   aguaFerve = True
+
+Após a execução: True...a temperatura estando a cima de 100º a água ferve.
+
+if condição:
+    comando
+    comando
+
+
+Exemplo 2:
+temperatura = 102
+if temperatura > 100:
+	   aguaFerve = True
+	   evaporação = "Será muito rápida"
+
+Após a execução: True para "aguaFerve" e "evaporação"
+
+
+Execução condicional, caso execute em True, if
+caso queira executar outro comando caso contrário.
+
+if condição:					V: Verdadeiro
+    comandoV1					F: Falso
+    comandoV2					1,2,3: Quantos comando quiser
+    comandoV3
+else:
+	comandoF1
+	comandoF2
+comandoSeguinte
+

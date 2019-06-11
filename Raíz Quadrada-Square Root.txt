@@ -1,0 +1,13 @@
+math.sqrt(x)
+Delvolve a raíz quadrada do número x
+
+Dará um erro de nome (NameError: name 'math is not defined')
+import math
+
+De novo...
+math.sqrt(8)
+2.8284271247461903
+
+delta = 763167
+math.sqrt(delta)
+

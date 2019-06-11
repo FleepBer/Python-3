@@ -1,0 +1,7 @@
+Depurador: Melhoras o programa, encontrar erro e ajudar selucionar.
+
+Debugger = Tirador de Bugs
+
+GO = Direto
+Over = Linha completa
+Break Point = Selecionar a linha com o direito (pinta de amarelo), parada antes de ler.

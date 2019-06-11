@@ -1,0 +1,111 @@
+https://blog.alura.com.br/ordenando-listas-no-python/
+
+Ordenando listas no Python:
+
+No meu sistema de cadastro de produtos para um mercado, recebi uma lista com alguns produtos:
+
+[nome:chocolate valor:3.45, nome:biscoito valor:2.49, nome:cafe valor:3.45,
+nome:suco valor:4.3, nome:feijao valor:10.0, nome:arroz valor:8.5]
+Cada produto é um objeto do tipo Produto, que é representado pela seguinte classe:
+
+class Produto(object):
+   
+  def __init__(self, nome, valor):
+    self.__nome = nome
+    self.__valor = valor
+     
+  def __repr__(self):
+    return "nome:%s valor:%s" % (self.__nome, self.__valor)
+ 
+  def get_nome(self):
+    return self.__nome
+ 
+  def get_valor(self):
+    return self.__valor
+Note que a lista contém produtos em uma ordem aleatória. Porém, preciso ordená-los, isto é, saber quais são os produtos mais caros ou mais baratos, ou então, ordenar pelo nome para facilitar a visualização dos produtos. Então como podemos fazer isso?
+
+Ordenando lista de números:
+
+No Python, quando precisamos ordenar listas, podemos utilizar a função sorted, por exemplo, para uma lista de números:
+
+numeros = [4,2,6,1,3]
+numeros_ordenados = sorted(numeros)
+ 
+print numeros
+print numeros_ordenados
+Temos o seguinte resultado:
+
+[4, 2, 6, 1, 3]
+[1, 2, 3, 4, 6]
+Ordenando lista de strings
+Funciona perfeitamente! Mas será que para textos também funciona? Vejamos:
+
+palavras = ["chocolate","biscoito", "cafe", "suco", "feijao", "arroz"]
+palavras_ordenadas = sorted(palavras)
+ 
+print palavras
+print palavras_ordenadas
+Então temos o seguinte o resultado:
+
+['chocolate', 'biscoito', 'cafe', 'suco', 'feijao', 'arroz']
+['arroz', 'biscoito', 'cafe', 'chocolate', 'feijao', 'suco']
+
+Critério de ordenação de objetos:
+
+Ué, não deveria ordenar? Deveria, mas precisamos primeiro pensar nas seguintes questões:
+
+Como ordenamos um objeto do tipo Produto?
+Pelo atributo nome? Ou pelo valor?
+Observe que inicialmente não sabemos, pois em determinados momentos, podemos querer ordenar por nome ou por valor. Em outras palavras, o sorted, inicialmente, também não sabe como ordenar o nosso objeto!
+
+Suponhamos que queremos ordenar por nome, como o sorted saberia disso? Não informamos em nenhum momento!
+
+Portanto, quando queremos ordenar um objeto do tipo Produto, precisamos informar por qual atributo ele será ordenado!
+
+Definindo critério de ordenação do objeto:
+
+Para informar ao sorted por qual atributo desejamos que ele ordene, precisamos enviar o parâmetro key com o valor do atributo da classe desejada. Vamos tentar pelo atributo valor:
+
+produtos_ordenados = sorted(produtos, key = Produto.get_valor)
+Observe que nesse caso, estamos utilizando o get_valor justamente por estarmos escondendo o atributo. Vejamos agora o resultado:
+
+[nome:chocolate valor:3.45, nome:biscoito valor:2.49, nome:cafe valor:3.45,
+nome:suco valor:4.3, nome:feijao valor:10.0, nome:arroz valor:8.5]
+[nome:biscoito valor:2.49, nome:chocolate valor:3.45, nome:cafe valor:3.45,
+nome:suco valor:4.3, nome:arroz valor:8.5, nome:feijao valor:10.0]
+Veja que agora os nossos objetos foram ordenados pelo valor! Em outras palavras, agora estão ordenados dos mais baratos para os mais caros 😀
+
+Vamos tentar pelo nome também? Bora alterar e verificar se dá certo:
+
+produtos_ordenados = sorted(produtos, key = Produto.get_nome)
+Então temos o seguinte resultado:
+
+[nome:chocolate valor:3.45, nome:biscoito valor:2.49, nome:cafe valor:3.45,
+nome:suco valor:4.3, nome:feijao valor:10.0, nome:arroz valor:8.5]
+[nome:arroz valor:8.5, nome:biscoito valor:2.49, nome:cafe valor:3.45,
+nome:chocolate valor:3.45, nome:feijao valor:10.0, nome:suco valor:4.3]
+
+Realizando ordenação reversa:
+
+Maravilha! Funcionou como o esperado! Entretanto, e se eu quiser da ordem inversa? Ou seja, do mais caro para o mais barato, ou então, da letra “z” para “a”, como faremos isso?
+
+Simples! basta adicionar o parâmetro reverse com o valor True. Vejamos o resultado ordenando pelo valor:
+
+produtos_ordenados = sorted(produtos, key = Produto.get_valor, reverse=True)
+Temos o seguinte resultado:
+
+[nome:chocolate valor:3.45, nome:biscoito valor:2.49, nome:cafe valor:3.45,
+nome:suco valor:4.3, nome:feijao valor:10.0, nome:arroz valor:8.5]
+[nome:feijao valor:10.0, nome:arroz valor:8.5, nome:suco valor:4.3,
+nome:chocolate valor:3.45, nome:cafe valor:3.45, nome:biscoito valor:2.49]
+Agora com o nome:
+
+produtos_ordenados = sorted(produtos, key = Produto.get_nome, reverse=True)
+Testando o código novamente:
+
+[nome:chocolate valor:3.45, nome:biscoito valor:2.49, nome:cafe valor:3.45,
+nome:suco valor:4.3, nome:feijao valor:10.0, nome:arroz valor:8.5]
+[nome:suco valor:4.3, nome:feijao valor:10.0, nome:chocolate valor:3.45,
+nome:cafe valor:3.45, nome:biscoito valor:2.49, nome:arroz valor:8.5]
+Funciona perfeitamente! Um recurso bem fácil que não exige inúmeras implementações para funcionar 🙂
+Vimos nesse post que quando queremos ordenar listas no Python, podemos utilizar a função sorted. Vimos, também, que ela funciona perfeitamente para strings ou números, entretanto, quando queremos ordenar objetos, precisamos informar como ela deve ordenar o objeto, ou seja, enviando um atributo do objeto por meio do parâmetro key.

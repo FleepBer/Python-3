@@ -1,0 +1,2 @@
+https://panda.ime.usp.br/pensepy/static/pensepy/
+https://pythonhelp.wordpress.com/2014/04/06/ordenacao-de-uma-lista/

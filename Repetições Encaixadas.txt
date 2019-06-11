@@ -1,0 +1,10 @@
+while COND:
+	while COND1:
+		COMANDO
+
+
+
+print( end/n = NOVA LINHA
+
+print (" ") = espaço em branco
+print ("\t")= TAB = Outra linha

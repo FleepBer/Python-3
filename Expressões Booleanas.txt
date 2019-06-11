@@ -1,0 +1,9 @@
+As expressões/valores booleanas:
+George Boole (Matemático Britânico )
+Ele criou algébra booleana, estudou valores que tem dois tipos, por exemplo: Verdadeiro ou Falso ou O e 1, ligado ou desligado. Computadores internamente funcionam com Números Binários.
+
+True= Verdadeiro
+False= Falso
+Not= "Não é, Falso ou Verdadeiro"
+Or = Ou...Um ou outro
+And = E

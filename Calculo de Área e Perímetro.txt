@@ -1,0 +1,15 @@
+Área e Perímetro:
+
+Área: superfície que ela ocupa em um espaço bidimencional (Altura x Largura)
+
+Perímetro: Medida do Intorno da Figura (Percorrer toda área fechada)
+
+Retângulo=Quadrilatero=4 Lados(Lados Opostos são iguais)
+Para a figura ser um retangulo, ela precisa ter os 4 ângulos a 90º.
+
+3m de altura
+5m de largura
+
+A=b.h=5mx3m=15m² (Metro vezes Metro, sempre vai dar ²)
+P=3+5+3+5=16m  (Soma de todos os lados)
+
