@@ -1,4 +1,1 @@
-# Python-3
-Introdução ao Python (Versão 3)
-
-Ness repositório contém algumas práticas do início com a linguagem.
+Introduction to Python (Version 3). Ness repository contains some practices from the beginning with the language.
